@@ -8,7 +8,7 @@ pipeline {
       	NAMESPACE="hello-dev"
         IMAGE_CREATED_BY="jenkins"
         IMAGE_NAME="hello-dev"
-        HARBOR_PROJECT="supportv2"
+        HARBOR_PROJECT="test-project"
  
         GIT_TAG=sh(returnStdout: true, script: '''        
             echo $(git describe --tags) 
@@ -80,13 +80,13 @@ pipeline {
         }
 
 
-     stage('Trigger ManifestUpdate') {
-            steps{
-                echo "triggering update-manifest-job"
-                build job: 'hello-Deploy', parameters: [
-                    string(name: 'DOCKER_TAG', value: env.DOCKER_TAG),
-                    ]
-            }
-        }
+    //  stage('Trigger ManifestUpdate') {
+    //         steps{
+    //             echo "triggering update-manifest-job"
+    //             build job: 'hello-Deploy', parameters: [
+    //                 string(name: 'DOCKER_TAG', value: env.DOCKER_TAG),
+    //                 ]
+    //         }
+    //     }
     }
 }
