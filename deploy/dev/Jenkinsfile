@@ -80,13 +80,13 @@ pipeline {
         }
 
 
-    //  stage('Trigger ManifestUpdate') {
-    //         steps{
-    //             echo "triggering update-manifest-job"
-    //             build job: 'hello-Deploy', parameters: [
-    //                 string(name: 'DOCKER_TAG', value: env.DOCKER_TAG),
-    //                 ]
-    //         }
-    //     }
+     stage('Trigger ManifestUpdate') {
+            steps{
+                echo "triggering update-manifest-job"
+                build job: 'hello-deploy', parameters: [
+                    string(name: 'DOCKER_TAG', value: env.DOCKER_TAG),
+                    ]
+            }
+        }
     }
 }
