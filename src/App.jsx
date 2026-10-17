@@ -10,7 +10,7 @@ function App() {
   return (
     <>
       <section id="center">
-        <h1>Hello Horld 2</h1>
+        <h1>Hello Horld naiim</h1>
       </section>
       <section id="spacer"></section>
     </>
