@@ -13,6 +13,8 @@ spec:
       labels:
         app: my-app
     spec:
+      imagePullSecrets:
+        - name: registry-harbor-naiim.com
       containers:
         - name: my-app
           image: registry-harbor-naiim.com/test-project/hello-dev:13-jenkins-hello-dev
