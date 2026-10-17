@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
         - name: my-app
-          image: registry-harbor-naiim.com/test-project/hello-dev:11-jenkins-hello-dev
+          image: null
           ports:
             - containerPort: 80
